@@ -20,10 +20,10 @@ async function createWindow() {
         height: 600,
         webPreferences: {
             // Set up IPC.
-            preload: path.join(__dirname, 'preload.js')
+            preload: path.join(__dirname, 'preload/preload.js')
         }
     })
-    await mainWindow.loadFile('index.html')
+    await mainWindow.loadFile('renderer/index.html')
 
     // Read the latest version from the `metadata.properties` file in the update site.
     const version = updater.getCurrentVersion().toString()

@@ -2,9 +2,10 @@
   "name": "fap-pluggable",
   "version": "0.0.3",
   "description": "An example app showing how to combine Electron apps with Conveyor",
-  "main": "main.js",
+  "main": "dist/main/main.js",
   "updateSite": "http://localhost:3000",
   "scripts": {
+    "dev": "vite",
     "start": "electron ."
   },
   "author": "Hydraulic Software",
@@ -13,7 +14,12 @@
     "@hydraulic/conveyor-control": "^1.2.0"
   },
   "devDependencies": {
+    "@types/node": "^22.10.2",
     "electron": "^30.0.0",
-    "koffi": "^2.5.8"
+    "koffi": "^2.5.8",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.4",
+    "vite-plugin-electron": "^0.29.0",
+    "vite-plugin-electron-renderer": "^0.14.6"
   }
 }
