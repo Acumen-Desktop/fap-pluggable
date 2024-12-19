@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fap Pluggable</title>
+
+  <script>
+    function doUpdateCheck() {
+      console.log("Doing update check");
+      window.electronAPI.triggerUpdateCheck()
+              .then(result => {
+                console.log('Update check result:', result);
+              })
+              .catch(error => {
+                console.error('Update check error:', error);
+                alert('Error triggering update check. Check the console for details.');
+              });
+    }
+  </script>
+</head>
+<body>
+  <h1>Hello World!</h1>
+
+  <h2>Version: <strong id="app-version">waiting</strong></h2>
+
+  <button onclick="doUpdateCheck()">Update check</button>
+</body>
+</html>
